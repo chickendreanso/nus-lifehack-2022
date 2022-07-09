@@ -58,7 +58,11 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Recycle Cans'),
+          backgroundColor: Colors.white,
+          leading: IconButton(icon: Icon(Icons.arrow_back, color: Color(0xFF16c986)), onPressed: () {
+            Navigator.pop(context);
+          }),
+          title: Text('Recycle Cans', style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.bold ,color: Color(0xFF16c986))),
         ),
         body: _questionIndex < _questions.length ? Quiz(
           questions: _questions,
