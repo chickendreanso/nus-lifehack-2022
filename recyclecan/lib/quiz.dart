@@ -15,11 +15,6 @@ class Quiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      // primary: false,
-      // padding: EdgeInsets.all(10),
-      // crossAxisSpacing: 10,
-      // mainAxisSpacing: 10,
-      // crossAxisCount: 2,
       children: <Widget>[
         Question(
           questions[questionIndex]['questionText'],
@@ -35,12 +30,11 @@ class Quiz extends StatelessWidget {
               ...(questions[questionIndex]['answers']
                       as List<Map<String, Object>>)
                   .map((answer) {
-                return Answer(answer['text'], () => answerQuestion());
+                return Answer(answer['text'], () => answerQuestion(answer['index']));
               }).toList()
             ],
           ),
         ),
-        OutlinedButton(onPressed: () {}, child: Text('Next Question')),
       ],
     );
   }

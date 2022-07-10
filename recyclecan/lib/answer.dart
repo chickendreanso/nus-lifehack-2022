@@ -9,8 +9,8 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 110,
-      height: 110,
+      width: 125,
+      height: 125,
       margin: EdgeInsets.all(10),
       child: Card(
         child: new InkWell(
@@ -24,7 +24,7 @@ class Answer extends StatelessWidget {
                 description,
                 style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 20,
+                    fontSize: 16,
                     color: Color(0xFF16c986)),
                 textAlign: TextAlign.center,
               ),
